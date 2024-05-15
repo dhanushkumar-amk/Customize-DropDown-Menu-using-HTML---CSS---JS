@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+:root {
+  --body-color: #efefef;
+  --main-color: #1876f2;
+  --bg-color: #fff;
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+.container {
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  /* background-color: var(--bg-color); */
+  margin: 80px auto;
+  border-radius: 8px;
+}
+.select-btn {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.select-btn .btn-text {
+  font-size: 17px;
+  font-weight: 400;
+  color: #333;
+}
+.select-btn .arrow-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+  height: 21px;
+  width: 21px;
+  background: #1876f2;
+  transition: 0.3s;
+}
+
+.list-items {
+  position: relative;
+  background-color: #fff;
+  margin-top: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  display: none;
+}
+.item .item-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+.list-items .item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 15px;
+  border-radius: 8px;
+}
+.list-items .item:hover {
+  background-color: #eceef3;
+}
+.item .checkbox {
+  height: 16px;
+  width: 16px;
+  border: 1.5px solid #c0c0c0;
+  border-radius: 4px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox .check-icon {
+  font-size: 11px;
+  transform: scale(0);
+  color: #fff;
+}
+
+.select-btn.open ~ .list-items {
+  display: block;
+}
+.select-btn.open .arrow-down {
+  transform: rotate(-180deg);
+}
+
+.item.checked .check-icon {
+  transform: scale(1);
+}
+.item.checked .checkbox {
+  background-color: #1876f2;
+  border-color: #1876f2;
+}
